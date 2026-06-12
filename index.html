@@ -377,7 +377,7 @@
   @media (max-width: 720px) {
     .nav-links {
       position: fixed;
-      top: 64px;
+      top: -100vh;
       right: 0;
       left: 0;
       background: #fff;
@@ -385,10 +385,11 @@
       padding: 16px 24px;
       gap: 16px;
       border-bottom: 1px solid var(--border);
-      transform: translateY(-110%);
-      transition: transform 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: top 0.25s ease;
+      z-index: 99;
     }
-    .nav-links.open { transform: translateY(0); }
+    .nav-links.open { top: 64px; }
     .nav-toggle {
       display: block;
       background: none;
